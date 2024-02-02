@@ -29,7 +29,7 @@ class FilmGallery extends Component {
       })
       .catch((error) => {
         console.error("Error fetching films:", error);
-        this.setState({ error: error.message });
+        this.setState({ error: error.message, loading: false });
       });
   };
 
