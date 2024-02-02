@@ -2,6 +2,7 @@ import "./App.css";
 import CustomNavbar from "./components/CustomNavbar";
 import FilmGallery from "./components/FilmGallery";
 import MyFooter from "./components/MyFooter";
+import Search from "./components/Search";
 import Setting from "./components/Settings";
 import TVShows from "./components/TVShows";
 import UserProfileEdit from "./components/UserProfileEdit";
@@ -13,6 +14,7 @@ function App() {
         <CustomNavbar />
       </header>
       <section>
+        <Search />
         <TVShows />
       </section>
       <main>
