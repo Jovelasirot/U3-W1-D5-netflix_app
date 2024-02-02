@@ -50,10 +50,11 @@ class Search extends Component {
           <Col>
             <h4 className="text-start">Find your favorite film</h4>
           </Col>
-          <Col sm={1}>
+          <Col sm={1} md={3} lg={2} xl={2}>
             <Form>
               <Form.Control
                 type="text"
+                className="rounded-1"
                 placeholder="Find a film"
                 value={this.state.searchValue}
                 onChange={(e) => {
@@ -63,8 +64,12 @@ class Search extends Component {
             </Form>
           </Col>
           <Col xs="auto">
-            <Button onClick={this.handleSearch} variant="dark rounder-0">
-              Search a film
+            <Button
+              onClick={this.handleSearch}
+              variant="dark"
+              className="rounded-1"
+            >
+              SEARCH
             </Button>
           </Col>
         </Row>
