@@ -4,7 +4,6 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import { Button, Spinner } from "react-bootstrap";
-import "bootstrap-icons/font/bootstrap-icons.css";
 
 class Search extends Component {
   state = {
