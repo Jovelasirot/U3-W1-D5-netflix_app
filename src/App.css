@@ -40,7 +40,52 @@
   transform: scale(1.05);
 }
 
-@media (min-width: 992px) {
+@media (max-width: 550px) {
+  .image-container {
+    position: relative;
+  }
+
+  .image-container::after {
+    content: url(../public/logoImg.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(200%, 30%);
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1200px) {
+  .image-container {
+    position: relative;
+  }
+
+  .image-container::after {
+    content: url(../public/logoImg.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(120%, 20%);
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1400px) {
+  .image-container {
+    position: relative;
+  }
+
+  .image-container::after {
+    content: url(../public/logoImg.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(120%, 20%);
+    z-index: 1;
+  }
+}
+
+@media (min-width: 1800px) {
   .image-container {
     position: relative;
   }
@@ -53,4 +98,8 @@
     transform: translate(200%, 20%);
     z-index: 1;
   }
+}
+
+.iconSetting {
+  height: 30px;
 }

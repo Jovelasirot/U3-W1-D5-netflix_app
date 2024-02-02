@@ -8,6 +8,7 @@ class FilmGallery extends Component {
     films: [],
     error: null,
     loading: true,
+    selected: false,
   };
 
   fetchFilms = () => {
@@ -41,9 +42,27 @@ class FilmGallery extends Component {
     return (
       <Container fluid className="bg-primary text-light pt-4">
         {error && <div>Error: {error}</div>}
-        {loading && <Spinner animation="border" variant="dark"></Spinner>}
-        <h4 className="text-start ms-2">{this.props.titlePart}</h4>
+        {loading && <Spinner animation="border" variant="warning"></Spinner>}
+        <Row>
+          <Col>
+            <h4 className="text-start ms-2">{this.props.titlePart}</h4>
+          </Col>
+          <Col className="text-end">
+            <Button
+              variant="primary"
+              className="rounded-0 p-1  border-1  border-secondary"
+              onClick={() => {
+                this.setState({
+                  selected: !this.state.selected,
+                });
+              }}
+            >
+              {this.state.selected === true ? "Hide Titles" : "Show Titles"}
+            </Button>
+          </Col>
+        </Row>
         <Row
+          xs={1}
           sm={1}
           md={3}
           lg={4}
@@ -52,12 +71,13 @@ class FilmGallery extends Component {
         >
           {films.slice(0, 6).map((film, index) => (
             <Col key={index}>
-              <div className="image-container">
+              <div className="image-container anima">
                 <img
                   src={film.Poster}
                   alt={film.Title}
-                  className="mt-1 w-75 h-100 anima"
+                  className="mt-1 w-75 h-100"
                 />
+                {this.state.selected && <Col>{film.Title}</Col>}
               </div>
             </Col>
           ))}
