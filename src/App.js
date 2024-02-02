@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import CustomNavbar from "./components/CustomNavbar";
+import FilmGallery from "./components/FilmGallery";
+import MyFooter from "./components/MyFooter";
+import TVShows from "./components/TVShows";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <CustomNavbar />
       </header>
+      <section>
+        <TVShows />
+      </section>
+      <main>
+        <FilmGallery titlePart="The Godfather" />
+        <FilmGallery titlePart="Harry Potter" />
+        <FilmGallery titlePart="The Indiana Jones" />
+      </main>
+      <footer>
+        <MyFooter />
+      </footer>
     </div>
   );
 }

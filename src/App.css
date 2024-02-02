@@ -24,15 +24,33 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logNavBar {
+  width: 100px;
+  height: 55px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.copyright {
+  font-size: 11px;
+}
+
+.anima {
+  transition: transform 0.3s ease;
+}
+.anima:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 992px) {
+  .image-container {
+    position: relative;
   }
-  to {
-    transform: rotate(360deg);
+
+  .image-container::after {
+    content: url(../public/logoImg.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(200%, 20%);
+    z-index: 1;
   }
 }
