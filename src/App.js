@@ -18,6 +18,7 @@ function App() {
         <TVShows />
       </section>
       <main>
+        {/* se vuoi cambiare la saga cambia la prop tittlePart */}
         <FilmGallery titlePart="The Godfather" />
         <FilmGallery titlePart="Harry Potter" />
         <FilmGallery titlePart="The Indiana Jones" />
