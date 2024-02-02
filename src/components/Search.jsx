@@ -4,6 +4,7 @@ import Form from "react-bootstrap/Form";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import { Button, Spinner } from "react-bootstrap";
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 class Search extends Component {
   state = {
@@ -66,10 +67,10 @@ class Search extends Component {
           <Col xs="auto">
             <Button
               onClick={this.handleSearch}
-              variant="dark"
+              variant="warning"
               className="rounded-1"
             >
-              SEARCH
+              <i className="bi bi-search"></i>
             </Button>
           </Col>
         </Row>
